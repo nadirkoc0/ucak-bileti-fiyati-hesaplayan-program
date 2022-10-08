@@ -15,9 +15,7 @@ public class Main {
         yolculukTipi=inp.nextInt();
 
         normalTutar=km * 0.10;
-        if ((km<1) && (yas<0) && (yolculukTipi!=1 || yolculukTipi!=2)){
-            System.out.println("Hatalı veri girdiniz.");
-        } else {
+        if ((km>0) && (yas>=0) && (yolculukTipi==1 || yolculukTipi==2)){
             if(yas<12){
                 yasIndirimOrani=0.10;
             } else if ((yas>=12) && (yas<24)) {
@@ -43,7 +41,8 @@ public class Main {
             System.out.println("Toplam Tutar :"+ toplamTutar + "TL");
             System.out.println("Gideceğiniz mesafe: " + km +" km");
             System.out.println("Yaşınız: " + yas);
-
+        } else {
+            System.out.println("Hatalı veri girdiniz.");
         }
     }
 }
